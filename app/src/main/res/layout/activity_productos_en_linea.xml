@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".productosenlinea.ProductosEnLineaActivity">
+
+    <Button
+        android:id="@+id/botoncarga"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="Carga"
+        android:onClick="cargarProductos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/slider_precio"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></com.google.android.material.slider.Slider>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="21dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botoncarga"
+        tools:context=".productosenlinea.ProductosEnLineaActivity">
+
+        <LinearLayout
+            android:id="@+id/cabecera"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:orientation="horizontal"
+            android:background="@color/gris"
+            android:visibility="invisible">
+            <LinearLayout
+                android:layout_width="0px"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:id="@+id/colid"
+                android:onClick="ordenar"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="ID"
+                    android:gravity="right|center"
+                    ></TextView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0px"
+                android:layout_weight="7"
+                android:layout_height="match_parent"
+                android:id="@+id/colnombre"
+                android:onClick="ordenar">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="NOMBRE PRODUCTO"
+                    android:gravity="center"
+                    ></TextView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0px"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:id="@+id/colprecio"
+                android:onClick="ordenar">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="PRECIO"
+                    android:gravity="center"
+                    ></TextView>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!--el orden de declaración dentro del Frame
+ hace que los hijos se vayan superponiendo
+ en este caso TextView está debajo
+ de Recycler-->
+        <!--    <TextView-->
+        <!--        android:layout_width="wrap_content"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        android:text="HOLA"-->
+        <!--        android:textSize="20sp"></TextView>-->
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/barra_progreso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:layout_gravity="center"></ProgressBar>
+    </FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

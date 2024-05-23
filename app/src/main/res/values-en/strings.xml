@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AppCursoPUE</string>
+    <string name="ayuda_nombre">Enter name</string>
+    <string name="ayuda_peso">Enter weight (kg)</string>
+    <string name="ayuda_altura">Enter height (m)</string>
+    <string name="boton_calcular">CALCULATE</string>
+    <string name="perros_internet_si">RETRIEVED LIST</string>
+    <string name="perros_internet_no">NO INTERNET SIGNAL</string>
+</resources>

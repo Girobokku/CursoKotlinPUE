@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">AppCursoPUE</string>
+    <string name="ayuda_nombre">Intro Nombre</string>
+    <string name="ayuda_peso">Intro Peso (kg)</string>
+    <string name="ayuda_altura">Intro Altura (m)</string>
+    <string name="boton_calcular">CALCULAR</string>
+    <string name="perros_internet_si">LISTADO RECUPERADO</string>
+    <string name="perros_internet_no">SIN ACCESO A INTERNET</string>
+    <string name="title_activity_maps">MapsActivity</string>
+</resources>

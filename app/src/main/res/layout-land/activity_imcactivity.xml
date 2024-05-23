@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".imc.IMCActivity">
+
+    <LinearLayout
+        android:layout_width="0px"
+        android:layout_height="match_parent"
+        android:layout_weight="70"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="5"
+            android:gravity="center">
+            <EditText
+                android:id="@+id/etnombre"
+                android:hint="@string/ayuda_nombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="5"
+            android:gravity="center">
+                <EditText
+                    android:id="@+id/etpeso"
+                    android:hint="@string/ayuda_peso"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="5"
+            android:gravity="center">
+            <EditText
+                    android:hint="@string/ayuda_altura"
+                    android:id="@+id/etaltura"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                 />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0px"
+        android:layout_height="match_parent"
+        android:layout_weight="30"
+       android:gravity="center"
+        >
+
+         <Button
+                android:id="@+id/botoncalcula"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="calcularImc"
+                android:text="@string/ayuda_altura"
+
+              />
+
+        <!--             android:layout_marginTop="50dp"-->
+        <!--             android:layout_marginLeft="75dp"-->
+        <!--             android:padding="20dp"-->
+    </LinearLayout>
+
+
+</LinearLayout>

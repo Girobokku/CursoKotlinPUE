@@ -1,0 +1,598 @@
+﻿#menu-mobile:not(.mm-menu) {
+    display: none;
+}
+
+html {
+    font-size: 15px;
+}
+
+body {
+    margin: 0;
+    font-family: "Source Sans Pro", "Nunito Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    text-align: left;
+    background-color: #f4f6fa;
+}
+
+
+.container .row {
+    display: block !important;
+}
+
+
+.header-home {
+    background-image: url('../../Resources/Images/Home/Background/img-ihub-banner-home.png');
+    background-position: center;
+    height: 600px;
+}
+
+.nav {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+    .nav > li > a {
+        position: relative;
+        display: inline-block;
+    }
+
+.nav-link {
+    font-weight: 600;
+}
+
+.nav-link {
+    display: block;
+    padding: .5rem 1rem;
+}
+/*#page-container.page-header-glass.page-header-fixed.page-header-scroll.page-header-dark #page-header {
+    background-image: linear-gradient(to right, #158dbf, #288ca0 53%, #5f8b47) !important;
+}*/
+#page-container.page-header-glass.page-header-fixed.page-header-scroll.page-header-dark #page-header {
+    background-color: #002045 !important;
+}
+
+.content-header {
+    display: block;
+}
+
+.content-header .nav > li > a:hover, .content-header .nav > li > a:focus {
+    background-color: transparent !important;
+}
+
+#page-footer {
+    display: block;
+}
+
+.p-hr {
+    width: 60px;
+    height: 4px;
+    background-color: #02aef2
+}
+
+.p-h1 {
+    font-size: 36px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.14;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.p-h2 {
+    font-size: 24px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.07;
+    letter-spacing: normal;
+    color: #333333;
+}
+
+.p-h3 {
+    font-size: 21px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.15;
+    letter-spacing: normal;
+}
+
+.p-text-lightblue {
+    color: #00adef !important;
+}
+
+.p-text-darkblue {
+    color: #326d8e !important;
+}
+
+.p-bg-blue {
+    background-color: #528dae !important;
+}
+
+.p-bg-darkblue {
+    background-color: #326d8e !important;
+}
+
+.p-bg-lightblue {
+    background-color: #00adef !important;
+}
+
+.p-bg-gray {
+    background-color: #f2f2f2 !important;
+}
+
+.red {
+    color: #d14;
+}
+
+.dropdown-menu {
+    margin-top: 0 !important;
+}
+
+.p-nav > .nav-item:hover {
+    background-color: #FFFFFF !important;
+}
+
+.p-nav > .nav-item > .nav-link {
+    border-radius: 0 !important;
+    color: #000000;
+}
+
+    .p-nav > .nav-item > .nav-link.active {
+        background-color: #00adef !important;
+        border-radius: 0 !important;
+        color: #FFFFFF;
+    }
+
+
+.p-navigation-link {
+    padding-bottom: 18px;
+}
+
+    .p-navigation-link a, .p-navigation-link a:hover, .p-navigation-link a:active, .p-navigation-link a:visited, .p-navigation-link a:link {
+        font-size: 15px;
+        font-weight: 600;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.15;
+        letter-spacing: normal;
+        color: #02aef2 !important;
+    }
+
+.p-value {
+    padding: 20px;
+}
+
+    .p-value h4 {
+        font-size: 21px;
+        font-weight: 600;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.15;
+        letter-spacing: normal;
+        color: #ffffff;
+        margin-bottom: 10px;
+        min-height: 50px;
+    }
+
+    .p-value p {
+        font-size: 14px;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #ffffff;
+    }
+
+.p-blog {
+    /*min-height: 500px;*/
+}
+
+    .p-blog h4 {
+        min-height: 65px;
+    }
+
+.btn-info {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    background-color: #3c90df;
+    border-color: #3c90df;
+}
+
+    .btn-info:hover {
+        color: #3c90df;
+        background-color: #FFFFFF;
+        border-color: #3c90df;
+    }
+
+
+.dropdown-toggle::after {
+    display: none;
+}
+    .owl-item > div > div {
+    min-height: 500px;
+}
+
+.contents a:hover {
+    text-decoration: none;
+    color: #03356d;
+}
+
+.contents a:visited, .contents a:active {
+    text-decoration: none;
+}
+
+.training-home-upcoming .owl-item > div > div {
+    min-height: 400px;
+}
+
+.p-accordion {
+    border-top: 4px solid #FFFFFF;
+    background-color: #f2f2f2;
+    background-image: url('../images/icons/icon-arrow-down.png');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    min-height: 100px;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+    .p-accordion.active {
+        border-top: 4px solid #326d8e !important;
+        background-color: #e2e2e2 !important;
+        background-image: url('../images/icons/icon-close.png') !important;
+        background-repeat: no-repeat !important;
+        background-position: right 10px center !important;
+    }
+
+
+    .p-accordion > a, .p-accordion > a:hover, .p-accordion > a:active, .p-accordion > a:visited, .p-accordion > a:link {
+        font-size: 18px;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.14;
+        letter-spacing: normal;
+        text-align: center;
+        color: #333333 !important;
+    }
+
+.p-accordion-content {
+    background-color: #326d8e;
+    color: #FFFFFF;
+    padding-top: 0px;
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+    padding-bottom: 20px;
+}
+
+.p-accordion-content .block-header p {
+    font-size: 21px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.15;
+    letter-spacing: normal;
+    color: #ffffff;
+}
+
+.p-accordion-content .block-header small {
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.14;
+    letter-spacing: normal;
+    color: #ffffff;
+}
+
+.p-accordion-content .block-content p, .p-accordion-content .block-content ul {
+    font-size: 14px;
+    color: #FFFFFF;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.41;
+    letter-spacing: 0.2px;
+}
+
+.p-accordion-content .block-content ul {
+    padding-left: 20px;
+}
+
+.p-accordion-content .block-content ul li {
+    padding-bottom: 10px;
+}
+
+.p-arrow-bottom {
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid #e2e2e2;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.bg-gray-light {
+    background-color: #e9ecef !important;
+}
+
+.h2, h2 {
+    font-size: 1.875rem;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 1.375rem;
+    font-family: "Source Sans Pro", "Nunito Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-weight: 600;
+    line-height: 1.25;
+    color: #171717;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 1.375rem;
+}
+
+.h2, h2 {
+    font-size: 1.875rem;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 1.375rem;
+    font-family: "Source Sans Pro", "Nunito Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-weight: 600;
+    line-height: 1.25;
+    color: #171717;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 1.375rem;
+}
+
+.block {
+    margin-bottom: 1.75rem;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(230,235,244,.4);
+}
+
+.block-content {
+    transition: opacity .25s ease-out;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1.25rem 1.25rem 1px;
+    overflow-x: visible;
+}
+
+.mb-2, .my-2 {
+    margin-bottom: .5rem !important;
+}
+
+.h5, h5 {
+    font-size: 1.125rem;
+}
+
+.btn-outline-info {
+    color: #3c90df;
+    background-color: transparent;
+    background-image: none;
+    border-color: #3c90df;
+}
+
+.text-muted {
+    color: #6c757d !important;
+}
+
+.btn:not(:disabled):not(.disabled) {
+    cursor: pointer;
+}
+
+.btn-outline-info:hover {
+    color: #fff;
+    background-color: #3c90df;
+    border-color: #3c90df;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.no-border {
+    border-top: none !important;
+    border-bottom: none !important;
+}
+
+@media (max-width: 768px){
+    .table-mobile {
+        font-size: 11px;
+    }
+
+    .table-mobile th {
+        font-size:9px;
+    }
+}
+
+.grecaptcha-badge {
+    z-index: 10000;
+}
+.menu-opacity {
+    background: rgba(0,32,69,28%)!important;
+}
+
+@media (max-width:576px) {
+    .menu-opacity {
+        background: rgba(0,32,69) !important;
+    }
+    #main-container {
+        margin-top: 76px !important;
+    }
+}
+
+/*
+   --------------------------------------------------------------------------
+   Plugin: Cookies Alert
+   --------------------------------------------------------------------------
+*/
+button#ihavecookiesBtn {
+    margin-left: 0px !important;
+}
+
+#gdpr-cookie-message {
+    display: inline-block;
+    position: fixed;
+    left:0;
+    bottom: 0px;
+    width: 100%;
+    padding-left: 200px;
+    padding-right: 50px;
+    padding-top: 90px;
+    padding-bottom: 90px;
+    background: #2B3442;
+    color: white;
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.35);
+    box-shadow: 0 0 10px rgba(0,0,0,0.35);
+    z-index: 999;
+}
+
+.cookie-description {
+    float: left;
+    width: 70%;
+}
+
+.cookie-buttons {
+    display: flex;
+    place-content: center;
+}
+
+#gdpr-cookie-message p, #gdpr-cookie-message ul {
+    color: white;
+    font-size: 15px;
+    line-height: 1.5em;
+    text-align: justify;
+}
+
+#gdpr-cookie-message a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    padding-bottom: 2px;
+    padding-top: 5px;
+    border-bottom: 1px solid white;
+    transition: all 0.3s ease-in;
+    line-height: inherit;
+}
+
+    #gdpr-cookie-message a:hover {
+        color: white;
+        border-bottom-color: #076D54;
+        transition: all 0.3s ease-in;
+    }
+
+#gdpr-cookie-accept {
+    border: none;
+    background: #076D54;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 15px;
+    padding: 5px 20px;
+    border-radius: 20px;
+    margin-left: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+
+.gdpr-cookie-reject {
+    margin-left: 20px;
+    border: none;
+    background: none;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+    .gdpr-cookie-reject:hover {
+        border-bottom: 1px solid #076D54;
+        transition: all 0.3s ease-in;
+    }
+
+#gdpr-cookie-accept:hover {
+    background: white;
+    color: #076D54;
+    transition: all 0.3s ease-in;
+}
+
+button#gdpr-cookie-advanced {
+    display: none;
+}
+
+#gdpr-cookie-types {
+    display: none !important;
+}
+
+.gdpr-cookies-modal {
+    margin-left:20px;
+    cursor: pointer;
+}
+
+.form-check-label {
+    color: #032F6F;
+}
+
+.saveCookies {
+    background-color: #076D54;
+}
+
+#gdpr-cookie-message button:disabled {
+    opacity: 0.3;
+}
+
+#gdpr-cookie-message input[type="checkbox"] {
+    float: none;
+    margin-top: 0;
+    margin-right: 5px;
+}
+
+@media (max-width:576px) {
+    #gdpr-cookie-message {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .cookie-description {
+        width: 100%;
+    }
+
+    .cookie-buttons {
+        display: block;
+        text-align-last: center !important;
+        text-align: -webkit-center !important;
+    }
+
+    #gdpr-cookie-accept {
+        display: block;
+        margin-left: 0px;
+        margin-bottom: 20px;
+    }
+
+    .gdpr-cookie-reject {
+        margin-left: 0px;
+    }
+}

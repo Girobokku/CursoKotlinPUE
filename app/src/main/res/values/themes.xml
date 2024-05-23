@@ -1,0 +1,15 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.AppCursoPUE" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/rojoverdadero</item>
+        <item name="colorSecondary">@color/marino</item>
+    </style>
+
+    <style name="Theme.AppCursoPUE" parent="Base.Theme.AppCursoPUE"/>
+
+    <style name="Theme.AppCursoPUESinBarra" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/rojoverdadero</item>
+        <item name="colorSecondary">@color/marino</item>
+    </style>
+</resources>

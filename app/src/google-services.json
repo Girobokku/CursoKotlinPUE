@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "706668233364",
+    "project_id": "autenticacionpue",
+    "storage_bucket": "autenticacionpue.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:706668233364:android:4aa3fa370dc1d7e6a6aa81",
+        "android_client_info": {
+          "package_name": "edu.pue.appcursopue"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCkh8Uo3G2Eek8rEVo6FewFMSRjFKC35ns"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

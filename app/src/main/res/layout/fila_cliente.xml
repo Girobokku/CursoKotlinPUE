@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:orientation="horizontal">
+
+<!--
+id=1, imageUrl=https://via.placeholder.com/150/92c952, name=Intelligent Metal Mouse, price=84.00
+-->
+
+
+    <TextView
+        android:id="@+id/edad_cliente"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:layout_width="0px"
+        android:text="40"
+        android:layout_height="match_parent"></TextView>
+
+    <TextView
+        android:text="Valeriano"
+        android:id="@+id/nombre_cliente"
+        android:layout_width="0px"
+        android:layout_weight="5"
+        android:gravity="center"
+        android:layout_height="match_parent"></TextView>
+
+    <TextView
+        android:text="valerianomoreno@gmail.com"
+        android:gravity="center"
+        android:id="@+id/correo_cliente"
+        android:layout_width="0px"
+        android:layout_weight="7"
+        android:layout_height="match_parent"></TextView>
+
+</LinearLayout>

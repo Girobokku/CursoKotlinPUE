@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:title="EJERCICIOS BÁSICOS">
+        <menu>
+            <item
+                app:showAsAction="always"
+                android:icon="@drawable/baseline_arrow_right_24"
+                android:orderInCategory="0"
+                android:title="Versiones app" />
+            <item
+                app:showAsAction="always"
+                android:icon="@drawable/baseline_arrow_right_24"
+                android:orderInCategory="1"
+                android:title="Índice de Masa Corporal" />
+        </menu>
+    </item>
+    <item android:title="EJERCICIOS MEDIOS">
+        <menu>
+            <item
+                app:showAsAction="always"
+                android:icon="@drawable/baseline_arrow_right_24"
+                android:orderInCategory="2"
+                android:title="Juego Adivina" />
+            <item
+                app:showAsAction="always"
+                android:icon="@drawable/baseline_arrow_right_24"
+                android:orderInCategory="3"
+                android:title="Ciclo de vida" />
+        </menu>
+    </item>
+
+    <item android:title="EJERCICIOS AVANZADOS">
+        <menu>
+            <item
+                app:showAsAction="always"
+                android:icon="@drawable/baseline_arrow_right_24"
+                android:orderInCategory="4"
+                android:title="Perros Web" />
+            <item
+                app:showAsAction="always"
+                android:icon="@drawable/baseline_arrow_right_24"
+                android:orderInCategory="5"
+                android:title="Listado Productos" />
+            <item
+                app:showAsAction="always"
+                android:icon="@drawable/baseline_arrow_right_24"
+                android:orderInCategory="6"
+                android:title="Búsqueda web" />
+
+            <item
+                app:showAsAction="always"
+                android:icon="@drawable/baseline_arrow_right_24"
+                android:orderInCategory="7"
+                android:title="Tabs Pestañas" />
+
+            <item
+                app:showAsAction="always"
+                android:icon="@drawable/baseline_arrow_right_24"
+                android:orderInCategory="8"
+                android:title="Seleccion Hora y Fecha" />
+
+            <item
+                app:showAsAction="always"
+                android:icon="@drawable/baseline_arrow_right_24"
+                android:orderInCategory="9"
+                android:title="Web Activity" />
+
+            <item
+                app:showAsAction="always"
+                android:icon="@drawable/baseline_arrow_right_24"
+                android:orderInCategory="10"
+                android:title="Lanzar Notificaion" />
+
+        </menu>
+    </item>
+
+
+</menu>

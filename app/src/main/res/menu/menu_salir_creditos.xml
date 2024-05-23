@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/opcionLogout"
+        android:orderInCategory="1"
+        android:title="Salir"
+        android:icon="@drawable/baseline_logout_24"
+        app:showAsAction="always|withText"/>
+    <item
+        android:id="@+id/opcionCreditos"
+        android:orderInCategory="2"
+        android:icon="@drawable/baseline_info_outline_24"
+        android:title="Créditos"
+        app:showAsAction="always|withText"/>
+</menu>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:orientation="horizontal">
+
+<!--
+id=1, imageUrl=https://via.placeholder.com/150/92c952, name=Intelligent Metal Mouse, price=84.00
+-->
+
+    <ImageView
+        android:src="@mipmap/ic_launcher"
+        android:id="@+id/imagen_producto"
+        android:layout_width="0px"
+        android:layout_weight="1"
+        android:scaleType="fitXY"
+        android:layout_height="match_parent"></ImageView>
+
+    <TextView
+        android:id="@+id/id_producto"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:layout_width="0px"
+        android:text="1"
+        android:layout_height="match_parent"></TextView>
+
+    <TextView
+        android:text="Tableta chocolate"
+        android:id="@+id/nombre_producto"
+        android:layout_width="0px"
+        android:layout_weight="7"
+        android:gravity="center"
+        android:layout_height="match_parent"></TextView>
+
+    <TextView
+        android:text="300"
+        android:gravity="center"
+        android:id="@+id/precioProducto"
+        android:layout_width="0px"
+        android:layout_weight="2"
+        android:layout_height="match_parent"></TextView>
+
+</LinearLayout>

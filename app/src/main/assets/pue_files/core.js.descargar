@@ -1,0 +1,313 @@
+﻿/*
+ *  Document   : core.js
+ *  Author     : PUE
+ *  Description: Custom JS code used in Consulting section
+ */
+
+class core {
+    
+    
+    /*
+     * Init functionality
+     */
+    static init() {
+        var requiredError = $(".footer-bottom-copyright").last().text().lastIndexOf("All rights reserved") === -1 ?
+            "&nbsp;<img src='/resources/images/icons/errorIcon16x16.png' title='Campo obligatorio'/>" :
+            "&nbsp;<img src='/resources/images/icons/errorIcon16x16.png' title='Required field'/>";
+        var formatError = $(".footer-bottom-copyright").last().text().lastIndexOf("All rights reserved") === -1 ?
+            "&nbsp;<img src='/resources/images/icons/errorIcon16x16.png' title='Formato no válido'/>" :
+            "&nbsp;<img src='/resources/images/icons/errorIcon16x16.png' title='Required field'/>";
+        var atLeastOneError = $(".footer-bottom-copyright").last().text().lastIndexOf("All rights reserved") === -1 ?
+            "&nbsp;<img src='/resources/images/icons/errorIcon16x16.png' title='Debes seleccionar como mínimo uno'/>" :
+            "&nbsp;<img src='/resources/images/icons/errorIcon16x16.png' title='You must select at least one!'/>";
+        var equalToError = "&nbsp;<img src='/resources/images/icons/errorIcon16x16.png' title='Los correos electrónicos no coinciden'/>";
+
+        $("#fMiniNewsletter").validate({
+            errorPlacement: function (error, element) {
+                if (element.attr("type") === "checkbox") {
+                    error.insertAfter($(element).next());
+                } else {
+                    error.appendTo(element.prev());
+                }
+            },
+            errorContainer: "#errorSummary",
+            invalidHandler: function (event, validator) {
+                var errors = validator.numberOfInvalids();
+            },
+            rules: {
+                fname: { required: true },
+                //lastname: { required: true },
+                femail: { required: true, email: true },
+                legalNote: { required: true }
+            },
+            messages: {
+                fname: requiredError,
+                //lastname: requiredError,
+                femail: { required: requiredError, email: formatError },
+                legalNote: requiredError
+            }
+        });
+
+        new Mmenu(
+            document.querySelector('#menu-mobile'),
+            {
+                extensions: ["pagedim-black", "position-front", "border-full", "border-none", "theme-dark"],
+                setSelected: true,
+                navbars: [
+                    {
+                        content: [
+                            '<a href="https://www.pue.es/"><span class="fa fa-home"></span></a>',
+                            '<a href="https://www.pue.es/donde-estamos"><span class="fa fa-map-marker"></span></a>',
+                            '<a href="https://www.pue.es/contacto"><span class="fa fa-envelope"></span></a>',
+                            '<a href="https://www.pue.es/trabaja-con-nosotros"><span class="fa fa-users"></span></a>',
+                            '<a href="https://www.pue.es/newsletter"><span class="fa fa-comments"></span></a>'
+                        ]
+                    },
+                    {
+                        content: ['prev', 'breadcrumbs', 'close']
+                    }, {
+                        position: 'bottom',
+                        content: [
+                            '<a href="https://www.facebook.com/ticpue" target="_blank"><span class="fab fa-facebook"></span></a>',
+                            '<a href="https://twitter.com/pue_data" target="_blank"><span class="fab fa-twitter"></span></a>',
+                            '<a href="https://www.linkedin.com/company/tic-pue/" target="_blank"><span class="fab fa-linkedin"></span></a>',
+                            '<a href="https://www.youtube.com/channel/UClY_-E5XsAKYAY6ch373mQA" target="_blank"><span class="fab fa-youtube"></span></a>'
+                        ]
+                    }
+                ]
+            }, {
+                searchfield: {
+                    clear: true
+                },
+                navbars: {
+                    breadcrumbs: {
+                        removeFirst: true
+                    }
+                }
+            }
+        );
+        //Se esconde el contenido de la página debajo del menu mobile
+        $('#menu-mobile li').on('click', function () {
+            $('.mm-page').css('display', 'none');
+        });
+        $('#menu-mobile h4').on('click', function () {
+            $('.mm-page').css('display', 'none');
+        });
+
+        if (window.location.href.indexOf("/en") < 0) {
+
+            $.getJSON('https://blog.pue.es/wp-json/wp/v2/posts?_embed&status=publish&per_page=7', function (data) {
+                $.each(data, function (position, post) {
+
+                    try {
+                        $('#slider-posts').append(`
+
+                                    <a class="block block-link-pop post-box mx-3" href="${post.link}" target="_blank" style="height: 460px">
+                                        <div class="block-header px-0 pt-0">
+                                            <img src="${post["_embedded"]["wp:featuredmedia"][0]["media_details"]["sizes"]["full"]["source_url"]}" class="img-fluid w-100">
+                                        </div>
+                                        <div class="block-content">
+                                            <div class="post-box-title">
+                                                <p style="" class="text-center">
+                                                    <strong>${post.title.rendered}</strong>
+                                                </p>
+                                            </div>
+                                            <p>
+                                                ${post.yoast_head_json.description}
+                                            </p>
+                                        </div>
+                                    </a>
+
+                                   
+                           
+                             `);
+                    } catch { }
+                });
+
+                //Inicializamos slider tras obtener los últimos posts
+                $("#slider-posts").slick({
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    dots: true,
+                    autoplaySpeed: 2000,
+                    infinite: true,
+                    arrows: true,
+                    responsive: [
+                        {
+                            breakpoint: 600,
+                            settings: {
+                                slidesToShow: 1,
+                                slidesToScroll: 1
+                            }
+                        }
+                    ]
+                });
+            });
+
+        }
+        else {
+            $.getJSON('https://blog.pue.es/en/wp-json/wp/v2/posts?_embed&status=publish&per_page=7', function (data) {
+                $.each(data, function (position, post) {
+
+                    $('#slider-posts').append(`
+                                   <a class="block block-link-pop post-box mx-3" href="${post.link}" target="_blank" style="height: 460px">
+                                        <div class="block-header px-0 pt-0">
+                                            <img src="${post["_embedded"]["wp:featuredmedia"][0]["media_details"]["sizes"]["full"]["source_url"]}" class="img-fluid w-100">
+                                        </div>
+                                        <div class="block-content">
+                                            <div class="post-box-title">
+                                                <p style="" class="text-center">
+                                                    <strong>${post.title.rendered}</strong>
+                                                </p>
+                                            </div>
+                                            <p>
+                                                ${post.yoast_head_json.description}
+                                            </p>
+                                        </div>
+                                    </a>
+                           
+                             `);
+                });
+
+                //Inicializamos slider tras obtener los últimos posts
+                $("#slider-posts").slick({
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    dots: true,
+                    autoplaySpeed: 2000,
+                    infinite: true,
+                    arrows: true,
+                    responsive: [
+                        {
+                            breakpoint: 600,
+                            settings: {
+                                slidesToShow: 1,
+                                slidesToScroll: 1
+                            }
+                        }
+                    ]
+                });
+            });
+        }
+
+        $("#slider-exito").slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            autoplay: true,
+            dots: false,
+            autoplaySpeed: 3000,
+            infinite: true,
+            arrows: true,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        });
+
+        $("#slider-clientes").slick({
+            slidesToShow: 6,
+            slidesToScroll: 1,
+            autoplay: true,
+            dots: false,
+            autoplaySpeed: 1000,
+            infinite: true,
+            arrows: true,
+            responsive: [
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        });
+
+
+        //https://github.com/ketanmistry/ihavecookies
+        $('body').ihavecookies({
+            title: '',
+            message: $(location).attr('href').includes("en") ? 'This website uses cookies to improve your user experience and provide you relevant content, as well as for basic analytical purposes. For more information, please check our <a href="https://www.pue.es/politica-de-cookies" target="_blank">cookie policy.</a><br/>' : 'Esta página web usa cookies para poder mejorar tu experiencia de usuario y ofrecerte contenido de interés, además de tener fines analíticos básicos. Para más información, consulta nuestra <a href="https://www.pue.es/politica-de-cookies" target="_blank">política de cookies</a>.<br/>',
+            delay: 600,
+            expires: 30,
+            uncheckBoxes: false,
+            acceptBtnLabel: $(location).attr('href').includes("en") ? 'Accept' : 'Aceptar',
+            advancedBtnLabel: $(location).attr('href').includes("en") ? 'Deny' : 'Rechazar',
+            moreInfoLabel: '',
+            link: 'https://www.pue.es/politica-de-cookies',
+            //cookieTypesTitle: 'Selecciona las cookies que deseas aceptar',
+            //fixedCookieTypeLabel: 'Esenciales',
+            //fixedCookieTypeDesc: 'Estas cookies ayudan a hacer funcionar el sitio web. El sitio web no puede funcionar adecuadamente sin estas cookies.',
+            //cookieTypes: [
+            //    {
+            //        type: 'Preferencias',
+            //        value: 'preferences',
+            //        description: 'Estas cookies permiten que el sitio web sea más fácil de usar en próximas visitas, recordando las últimas búsquedas, autorrellenando algunos campos de formulario y otras opciones.'
+            //    },
+            //    {
+            //        type: 'Analytics',
+            //        value: 'analytics',
+            //        description: 'Estas cookies son indispensables para ofrecer una mejora continua del rendimiento del sitio web y la experiencia de usuario, permitiéndonos medir de forma agregada y anónima la interacción de los usuarios con este sitio.'
+            //    },
+            //    {
+            //        type: 'Marketing',
+            //        value: 'marketing',
+            //        description: 'Estas cookies permiten que la publicidad que te mostramos en nuestro sitio web y en el de terceros sea adecuada y personalizada para ti, demás de ofrecer servicios de comparación de precios.'
+            //    }
+            //],
+            // Optional callback function when 'Accept' button is clicked
+            onAccept: function () {
+                // Do whatever you need to here...
+                var myPreferences = $.fn.ihavecookies.cookie();
+                //console.log('Yay! The following preferences were saved...');
+                //console.log(myPreferences);
+            },
+
+
+        });
+
+
+        setTimeout(function () {
+            //Añadir classes a los elementos del panel de cookies
+            $("#gdpr-cookie-message p").first().addClass("cookie-description");
+            $("#gdpr-cookie-message p").eq(1).addClass("cookie-buttons");
+
+            //Añadir botones Rechazar/Configuración
+            if ($(location).attr('href').includes("en")) {
+                $(".cookie-buttons").append("<button type='button' class='gdpr-cookie-reject'>Deny</button>");
+                $(".cookie-buttons").append("<a class='gdpr-cookies-modal' data-toggle='modal' data-target='#cookiesModal'>Manage</a>");
+
+            } else {
+                $(".cookie-buttons").append("<button type='button' class='gdpr-cookie-reject'>Rechazar</button>");
+                $(".cookie-buttons").append("<a class='gdpr-cookies-modal' data-toggle='modal' data-target='#cookiesModal'>Configurar</a>");
+
+            }
+                
+
+            $(".gdpr-cookie-reject").click(function () {
+                $("#gdpr-cookie-accept").click();
+            })
+
+        }, 601);
+    }
+
+    
+
+}
+
+// Initialize when page loads
+$(() => { core.init(); });
